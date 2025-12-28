@@ -52,26 +52,26 @@ Creates foundational audit logging infrastructure using CloudFormation with comp
 
 ## Quick Start
 
-Basic deployment workflow:
+Basic deployment workflow for CloudTrail audit logging infrastructure:
 
 ```bash
 # Clone repository and configure environment
 git clone https://github.com/stephenabbot/service-observability-cloudtrail.git
 cd service-observability-cloudtrail
 
-# Configure deployment settings
-cp .env.example .env
-# Edit .env with your AWS region, tags, and CloudTrail configuration
+# Configure deployment settings using provided template
+cp .env .env.local  # Edit with your specific configuration
+# Modify AWS region, environment tags, and CloudTrail settings
 
-# Verify prerequisites and deploy
+# Verify prerequisites and deploy infrastructure
 ./scripts/verify-prerequisites.sh
 ./scripts/deploy.sh
 
-# Verify deployment
+# Verify deployment and resource creation
 ./scripts/list-deployed-resources.sh
 ```
 
-See [prerequisites documentation](docs/prerequisites.md) for detailed requirements, [troubleshooting guide](docs/troubleshooting.md) for common issues, [configuration documentation](docs/configuration.md) for detailed parameter reference, and [cost estimation guide](docs/cost-estimation.md) for deployment cost analysis.
+Review [prerequisites documentation](https://github.com/stephenabbot/service-observability-cloudtrail/blob/main/docs/prerequisites.md) for required tools and AWS permissions, [troubleshooting guide](https://github.com/stephenabbot/service-observability-cloudtrail/blob/main/docs/troubleshooting.md) for common deployment issues and resolution steps, [configuration documentation](https://github.com/stephenabbot/service-observability-cloudtrail/blob/main/docs/configuration.md) for detailed parameter reference and environment examples, and [cost estimation guide](https://github.com/stephenabbot/service-observability-cloudtrail/blob/main/docs/cost-estimation.md) for deployment cost analysis and optimization strategies.
 
 ## AWS Well-Architected Framework
 
